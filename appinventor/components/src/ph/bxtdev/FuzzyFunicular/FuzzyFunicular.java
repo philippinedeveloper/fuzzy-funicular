@@ -28,6 +28,7 @@ public class FuzzyFunicular extends AndroidNonvisibleComponent {
     //Activity and Context
     private Context context;
     private Activity activity;
+  
 
     public FuzzyFunicular(ComponentContainer container){
         super(container.$form());
@@ -37,6 +38,7 @@ public class FuzzyFunicular extends AndroidNonvisibleComponent {
 
     @SimpleProperty(description = "Gets environment's External Storage Directory")
     public String GetExternalStorageDirectory(){
-      return Environment.getExternalStorageDirectory.getAbsolutePath();
+      Environment environment;
+      return environment.getExternalStorageDirectory.getAbsolutePath();
     }
 }
