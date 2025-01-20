@@ -21,15 +21,15 @@ import com.google.appinventor.components.runtime.EventDispatcher;
 //Libraries
 @UsesLibraries(libraries = "")
 //Permissions
-@UsesPermissions(permissionNames = "")
+@UsesPermissions(permissionNames = "android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE")
 
 public class FuzzyFunicular extends AndroidNonvisibleComponent {
 
     //Activity and Context
     private Context context;
     private Activity activity;
+    private Environment environment;
   
-
     public FuzzyFunicular(ComponentContainer container){
         super(container.$form());
         this.activity = container.$context();
@@ -38,7 +38,6 @@ public class FuzzyFunicular extends AndroidNonvisibleComponent {
 
     @SimpleProperty(description = "Gets environment's External Storage Directory")
     public String GetExternalStorageDirectory(){
-      Environment environment;
       return environment.getExternalStorageDirectory.getAbsolutePath();
     }
 }
