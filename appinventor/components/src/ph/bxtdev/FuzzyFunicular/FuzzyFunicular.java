@@ -18,25 +18,27 @@ import com.google.appinventor.components.runtime.EventDispatcher;
         iconName = "appinventor/components/src/ph/bxtdev/HelloWorld/aiwebres/icon.png")
 
 @SimpleObject(external = true)
-//Libraries
+
+// Libraries
 @UsesLibraries(libraries = "")
-//Permissions
-@UsesPermissions(permissionNames = "android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE")
+
+// Permissions
+@UsesPermissions(permissionNames = "android.permission.READ_EXTERNAL_STORAGE, android.permission.WRITE_EXTERNAL_STORAGE")
 
 public class FuzzyFunicular extends AndroidNonvisibleComponent {
 
-    //Activity and Context
+    // Activity and Context
     private Context context;
     private Activity activity;
-  
-    public FuzzyFunicular(ComponentContainer container){
+
+    public FuzzyFunicular(ComponentContainer container) {
         super(container.$form());
         this.activity = container.$context();
         this.context = container.$context();
     }
 
     @SimpleProperty(description = "Gets environment's External Storage Directory")
-    public String GetExternalStorageDirectory(){
-      return Environment.getExternalStorageDirectory.getAbsolutePath();
+    public String GetExternalStorageDirectory() {
+        return Environment.getExternalStorageDirectory().getAbsolutePath();  
     }
 }
