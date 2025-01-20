@@ -15,7 +15,7 @@ import com.google.appinventor.components.runtime.EventDispatcher;
         description = "Gets environment's External Storage Directory - Made using <a href=\"https://github.com/philippinedeveloper/WarlockExtensionBuilder\">Warlock</a>",
         category = ComponentCategory.EXTENSION,
         nonVisible = true,
-        iconName = "appinventor/components/src/ph/bxtdev/HelloWorld/aiwebres/icon.png")
+        iconName = "aiwebres/icon.png")
 
 @SimpleObject(external = true)
 
